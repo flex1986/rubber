@@ -29,7 +29,7 @@ class Resource(object):
         path = self.base_url + self.path
         try:
             response = requests.request(method, path, data=data_to_json(data), **kwargs)
-        except Exception, e:
+        except Exception:
             if self.raise_on_error:
                 raise
             import logging
